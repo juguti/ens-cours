@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="source">Naama <br> Hugo</div>
+    <h1>Cours de l'ENS</h1>
+    <p>Niveaux de précision: </p>
+    <div id="range">
+        <input type="range" min="1" max="3" id="indi" value="1">
+    </div>
+    <div id="niv1">
+        <div class="texte">
+            <h2> Bilan 1 d'énergie:</h2>
+            <p>
+             Reçue: P <sub>s/t</sub> <br>
+             émise: I<sub>terre</sub>(T) x S <br></p>
+
+            <p> 
+                on sait que: <br>
+                I <sub>terre</sub> est une constante égale à 1370 w.m <sup>-2</sup> et <br>
+                que σ est la constante de Stefan-Boltzmann et vaut
+                 5.67.10<sup>-8</sup> w<sup>-1</sup>m<sup>2</sup>k<sup>-4</sup> <br>
+                et que le raport de la surface receptrice de la terre sur la surface émetrice est de 1/4 <br><br></p>
+
+            <p> P = I × S <br>
+            P = σ × T<sup>4</sup> × S  <br></p>
+
+            <p> on en déduit que: <br>
+            I × S<sub>r</sub> = σ × T<sup>4</sup> × S<sub>e</sub> <=> T<sup>4</sup> = I/σ × S<sub>r</sub>/S<sub>e</sub>  <br>
+            T4 = 1370/5.67.10<sup>-18</sup> × 1/4<br>
+            T4 = 6 040 564 374<br>
+            T = 4√6 040 564 374 <br>
+            T = 278,8 °K soit 6 °C <br>
+        </div>
+        <img src="bilan1.png" alt=""></p>
+    </div>
+    <div id="niv2">
+        <div class="texte">
+            <h2> Bilan 2 d'énergie:</h2>
+            <p> 
+                Prenons maintenant le phénomen d'Albedo (L'albédo, ou albedo (sans accent), est le pouvoir réfléchissant d'une surface,
+                c'est-à-dire le rapport du flux d'énergie lumineuse réfléchie au flux d'énergie lumineuse incidente.
+                C'est une grandeur sans dimension, comparable à la réflectance, mais d'application plus spécifique,
+                utilisée notamment en astronomie, climatologie et géologie.) en compt <br>
+            </p>
+
+            <p>
+                Dans le cas de la Terre l'Albedo est d'environ 0.3 donc I' = I<sub>terre</sub> * (1-0.3) soit 959 w.m<sup>-2</sup>
+                en reprenant le calcule précédent on obtient: <br>
+                T4 = 959/5.67.10-18 × 1/4<br>
+                T4 = 4 228 395 062 <br>
+                T = 4√4 228 395 062 <br>
+                T = 255 °K soit -10 °C <br>
+            </p>
+        </div>
+        <img src="bilan2.png" alt="">
+    </div>
+    <div id="niv3">
+        <div class="texte">
+            <h2> Bilan 3 d'énergie:</h2>
+            <p>
+                Recut : <br>
+                I<sub>s/t</sub> × (1-A) × P<sub>visible</sub> <br>
+                I<sub>terre</sub> <br>
+                Emis: <br>
+                I<sub>terre</sub> × P<sub>IR</sub> <br>
+                I<sub>s/t</sub> × (1-A)× P<sub>visible</sub> <br><br>
+
+                I/4 × (1-A) - Iterre × P IR = Iterre - I × (1-A) × P visible <br>
+                I/4 × (1-A) + I × (1-A) × P visible = Iterre + Iterre × P IR <br>
+                I/4 × (1-A) × (1-P visible) = Iterre (1+P IR)<br>
+                Iterre = I/4 × (1-A) × (1 + P visible)/(1 + P IR)<br>
+
+                T4 = I(1-0.3)/4σ × ((1 + P visible)/(1 + P IR)) 
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
