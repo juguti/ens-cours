@@ -57,7 +57,7 @@ p{
 }
 @media screen and (max-width: 800px){
     #niv1,#niv2,#niv3{
-        flex-direction:colum;
+        flex-direction: column;
         justify-content: space-around;
     }
     .texte{
